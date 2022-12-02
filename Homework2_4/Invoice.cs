@@ -12,6 +12,7 @@ namespace Homework2_4
         string article;
         int quantity;
 
+        /*
         public int Account
         {
             get { return account; }
@@ -24,6 +25,7 @@ namespace Homework2_4
         {
             get { return provider; }
         }
+        */
         public string Article
         {
             set
@@ -46,6 +48,7 @@ namespace Homework2_4
                 return quantity;
             }
         }
+        
 
         public Invoice(int account, string customer, string provider)
         {
@@ -58,22 +61,22 @@ namespace Homework2_4
         public void CalculateVAT(Invoice invoice, int price, double vat_rate)
         {
 
-            Console.WriteLine($"Account {invoice.Account}");
-            Console.WriteLine($"Customer {invoice.Customer}");
-            Console.WriteLine($"Provider {invoice.Provider}");
-            Console.WriteLine($"Article {invoice.Article}");
-            Console.WriteLine($"Quantity {invoice.Quantity}");
+            Console.WriteLine($"Account {account}");
+            Console.WriteLine($"Customer {customer}");
+            Console.WriteLine($"Provider {provider}");
+            Console.WriteLine($"Article {article}");
+            Console.WriteLine($"Quantity {quantity}");
             Console.WriteLine($"Price {price}");
 
             if (vat_rate != 0)
             {
                 Console.WriteLine($"VAT_rate {vat_rate}");
-                Console.WriteLine($"Payment amount with VAT {invoice.Quantity * price + (invoice.Quantity * price * vat_rate/100)}");
-                Console.WriteLine($"VAT {(invoice.Quantity * price * vat_rate)/100}");
+                Console.WriteLine($"Payment amount with VAT {quantity * price + (quantity * price * vat_rate/100)}");
+                Console.WriteLine($"VAT {(quantity * price * vat_rate)/100}");
             }
             else
             {
-                Console.WriteLine($"Payment amount {invoice.Quantity * price}");
+                Console.WriteLine($"Payment amount {quantity * price}");
             }
             Console.WriteLine(new string('-',30) );
 
